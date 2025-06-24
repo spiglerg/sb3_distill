@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sb3_distill"
+version = "1.0.0"
+authors = [
+  { name="Giacomo Spigler <http://www.spigler.net/giacomo>" },
+]
+description = "Collection of policy distillation methods implemented within the stable-baselines3 framework."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+keywords = ["policy distillation", "stable-baselines3", "n-distill", "student-distill", "teacher-distill", "proximal policy distillation"]
+
+dependencies = [
+    "stable_baselines3"
+]
+
+[project.urls]
+"Homepage" = "https://www.tilburg-robotics.eu"
+"GitHub" = "https://github.com/spiglerg/sb3_distill"
+#"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+
+
+[tool.black]
+line-length = 120
+#target_version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
